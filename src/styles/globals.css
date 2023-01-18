@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* #region  /**=========== Zinc Color =========== */
+    --tw-color-zinc-50: 245 245 245;
+    --tw-color-zinc-100: 244 244 245;
+    --tw-color-zinc-200: 228 228 231;
+    --tw-color-zinc-300: 212 212 216;
+    --tw-color-zinc-400: 161 161 170;
+    --tw-color-zinc-500: 113 113 122;
+    --tw-color-zinc-600: 82 82 91;
+    --tw-color-zinc-700: 63 63 70;
+    --tw-color-zinc-800: 39 39 42;
+    --tw-color-zinc-900: 24 24 27;
+    --color-zinc-50: rgb(var(--tw-color-zinc-50));
+    /* #fafafa */
+    --color-zinc-100: rgb(var(--tw-color-zinc-100));
+    /* #f4f4f5 */
+    --color-zinc-200: rgb(var(--tw-color-zinc-200));
+    /* #e4e4e7 */
+    --color-zinc-300: rgb(var(--tw-color-zinc-300));
+    /* #d4d4d8 */
+    --color-zinc-400: rgb(var(--tw-color-zinc-400));
+    /* #a1a1aa */
+    --color-zinc-500: rgb(var(--tw-color-zinc-500));
+    /* #71717a */
+    --color-zinc-600: rgb(var(--tw-color-zinc-600));
+    /* #52525b */
+    --color-zinc-700: rgb(var(--tw-color-zinc-700));
+    /* #3f3f46 */
+    --color-zinc-800: rgb(var(--tw-color-zinc-800));
+    /* #27272a */
+    --color-zinc-900: rgb(var(--tw-color-zinc-900));
+    /* #18181b */
+
+    /* #region  /**=========== Primary Color =========== */
+    --tw-color-gray-50: 240 249 255;
+    --tw-color-gray-100: 240 249 255;
+    --tw-color-gray-200: 240 249 255;
+    --tw-color-gray-500: 240 249 255;
+    --tw-color-primary-50: 240 249 255;
+    --tw-color-primary-100: 224 242 254;
+    --tw-color-primary-200: 186 230 253;
+    --tw-color-primary-300: 125 211 252;
+    --tw-color-primary-400: 56 189 248;
+    --tw-color-primary-500: 14 165 233;
+    --tw-color-primary-600: 2 132 199;
+    --tw-color-primary-700: 3 105 161;
+    --tw-color-primary-800: 7 89 133;
+    --tw-color-primary-900: 12 74 110;
+    --color-primary-50: rgb(var(--tw-color-primary-50));
+    /* #f0f9ff */
+    --color-primary-100: rgb(var(--tw-color-primary-100));
+    /* #e0f2fe */
+    --color-primary-200: rgb(var(--tw-color-primary-200));
+    /* #bae6fd */
+    --color-primary-300: rgb(var(--tw-color-primary-300));
+    /* #7dd3fc */
+    --color-primary-400: rgb(var(--tw-color-primary-400));
+    /* #38bdf8 */
+    --color-primary-500: rgb(var(--tw-color-primary-500));
+    /* #0ea5e9 */
+    --color-primary-600: rgb(var(--tw-color-primary-600));
+    /* #0284c7 */
+    --color-primary-700: rgb(var(--tw-color-primary-700));
+    /* #0369a1 */
+    --color-primary-800: rgb(var(--tw-color-primary-800));
+    /* #075985 */
+    --color-primary-900: rgb(var(--tw-color-primary-900));
+    /* #0c4a6e */
+    /* #endregion  /**======== Primary Color =========== */
+}
+
+@layer base {}
+
+@layer utilities {
+    body {
+        background-color: var(--color-zinc-50);
+        ;
+    }
+
+    a {
+        width: 100%
+    }
+
+    .animated-underline {
+        background-image: linear-gradient(#33333300, #33333300),
+            linear-gradient(to right,
+                var(--color-primary-400),
+                var(--color-primary-500));
+        background-size: 100% 2px, 0 2px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .animated-underline {
+            transition: 0.3s ease;
+            transition-property: background-size, color, background-color,
+                border-color;
+        }
+    }
+
+    .animated-underline:hover,
+    .animated-underline:focus-visible {
+        background-size: 0 2px, 100% 2px;
+    }
+
+    .animated-delay-2 {
+        animation-delay: 200ms;
+    }
+}
+
+/* ========SWIPER ========= */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+*:disabled {
+    background-color: #d4d4d4;
+    color: #606060;
+}
+
+/* ========================== */
+.inputPrivateNumber {
+    text-align: center;
+    height: 48px !important;
+    width: 48px !important;
+    border-radius: 10px;
+    border-color: #ccc;
+    font-size: 24px;
+    direction: ltr;
+}
+
+.infinite-scroll-component {
+    overflow-x: hidden;
+}
+
+.List {
+    direction: rtl !important;
+}
