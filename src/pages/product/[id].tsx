@@ -18,7 +18,7 @@ export default function SearchResult() {
         ['product', productId],
         async () =>
             await fetch(
-                `https://core.basalam.com/api_v2/product/${53610}/cache`
+                `https://core.basalam.com/api_v2/product/${productId}/cache`
             ).then((result) => result.json()),
         {
             keepPreviousData: true,
@@ -43,7 +43,7 @@ export const getServerSideProps = withCSR(async (context) => {
             ['product', productId],
             async () =>
                 await fetch(
-                    `https://core.basalam.com/api_v2/product/${53610}/cache`
+                    `https://core.basalam.com/api_v2/product/${productId}/cache`
                 ).then((result) => result.json())
         ),
     ]);

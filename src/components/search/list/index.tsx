@@ -12,7 +12,7 @@ function SearchList({
     isFetchingNextPage,
 }) {
     return (
-        <div className='h-[89vh]'>
+        <div className='h-[88vh]'>
             <InfiniteScrollComponent
                 data={data}
                 isSuccess={isSuccess}

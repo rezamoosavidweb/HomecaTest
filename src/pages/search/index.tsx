@@ -42,6 +42,7 @@ export default function SearchResult() {
     const q = router.query?.q;
 
     const fetchRepositories = async (page) => {
+        sessionStorage.removeItem('searchScroll');
         const response = await fetch(
             `https://search.basalam.com/ai-engine/api/v2.0/product/search?productAds=true&adsImpressionDisable=false&q=${q}&literal=false&from=${
                 (page - 1) * LIMIT

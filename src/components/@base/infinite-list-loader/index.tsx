@@ -58,7 +58,7 @@ export default function InfiniteScrollComponent({
                     {RenderItem(data, index, listRef?.current)}
                 </div>
                 {isFetchingNextPage && index === data?.length - 1 && (
-                    <div className='absolute right-0 my-2 flex w-[33vw] justify-center'>
+                    <div className='fixed right-[32vw] my-2 flex w-[33vw] justify-center'>
                         <Loading />
                     </div>
                 )}
@@ -102,7 +102,7 @@ export default function InfiniteScrollComponent({
                 return (
                     <Grid
                         columnCount={cols}
-                        columnWidth={Math.floor(width / cols - 10)}
+                        columnWidth={Math.floor(width / cols - 12)}
                         height={height}
                         rowCount={Math.ceil(data?.length / cols)}
                         overscanRowCount={5}
